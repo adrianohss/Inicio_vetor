@@ -1,33 +1,27 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 5
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
+int main() {
+    int i;
+    float nota[TAM], media, maiorNota;
+    for(i=0; i < TAM; i++){
+        printf("Digite a nota %d :",i+1);
+        scanf("%f",&nota[i]);
+        media += nota[i];
+    }
+    
+    media=media/TAM;
+    printf("A média é %f \n", media);
+    
+    for(i=0; i < TAM; i++){
+        printf("%.1f \n",nota[i]);    
+    }
+    
+    for(i=0; i < TAM; i++){
+        if(nota[i] > media){
+            printf("%.1f \n",nota[i]);
+        }
+    }
+    return 0;
+}
